@@ -8,7 +8,14 @@ if [ ! -d /home/developer/.ssh ]; then
     chmod 600 /home/developer/.ssh/authorized_keys
     chown -R developer:developer /home/developer
 fi
+
+if [ ! -d /home/developer/.sshd ]; then
+    ssh-keygen -A
+    mv /etc/ssh /home/developer/.sshd
+fi
+rm -rf /etc/ssh
+ln -s /home/developer/.sshd /etc/ssh
+
 echo ${AUTH_PUB_KEY} > /home/developer/.ssh/authorized_keys
 
-ssh-keygen -A
 exec /usr/sbin/sshd -D -e "$@"

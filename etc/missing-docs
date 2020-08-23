@@ -1,0 +1,15 @@
+acl
+bash
+chkconfig
+curl
+gawk
+grep
+gzip
+libcap
+p11-kit
+pam
+rpm
+sed
+shadow-utils
+systemd
+tar
