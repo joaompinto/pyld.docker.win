@@ -12,14 +12,13 @@ This repository provides shell scritps and the Dockerfile required to setup a li
 
 ## Requirements:
 - Windows 10
-- Git Bash
 - Docker for Windows
 
-# Build the image
-From a GitBash terminal:
-```sh
-./build.sh
-```
+# How to use this repository:
+
+Download and extract this repository archive from:
+https://github.com/joaompinto/pyld.docker.win/archive/master.zip
+
 
 If you you are using Git Bash for the first time, make sure you [generate an ssh key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key).
 This key will be used to login into authenticate with the container.
