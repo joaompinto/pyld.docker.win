@@ -8,6 +8,7 @@ fi
 set -eu
 
 docker run -e AUTH_PUB_KEY="$AUTH_PUB_KEY" \
+    --restart always \
     -d --name pyld \
     -p "127.0.0.1:2222:22" \
     -v pyld-home:/home \

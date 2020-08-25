@@ -13,6 +13,7 @@ RUN \
      yum -y install $(</etc/extra-packages) && \
      yum clean all
 
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 2
 RUN rm /etc/extra-packages /etc/missing-docs
 
 ENTRYPOINT /etc/entrypoint.sh
